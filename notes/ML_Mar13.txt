@@ -1,0 +1,82 @@
+1. Boosting
+2. Random Forest
+3. Bagging
+
+
+Model Ensembles
+Combining models
+  bagging,
+	boosting
+	ECOC,
+	stacking
+
+Bagging
+  generate bootstrap replicates of training sets by sampling with replacement
+	learn one model on each replicate
+	combine by uniform voting
+
+	less useful on linear classifiers, but useful for things like D-Trees
+
+  having a bunch of D-Trees that vote is better than having one big tree
+
+	bagging more efficient with high-variance models (so the different versions
+	make different mistakes)
+
+
+Boosting
+  Maintain a vector of weights for examples
+	initalize with uniform weights
+	Loop
+	  apply learner to weighted examples
+		increase weights of misclassified examples
+	
+  conbine models by weighted voting
+
+	AdaBoost
+
+  boosing D-Trees is one of the most popular algorithms
+	boosting has been generalized to the idea of gradient tree boosting
+
+  XG boost - implementation of gradient tree boosting
+
+	really high-dimensional space - linear model
+
+More flexible - lower bias, more variance
+Less flexible - higher bias, lower variance 
+   small D-Tree, etc
+
+Ensembles are ways of reducing both bias and variance
+
+Boosting works well in theory and practice! 
+
+Random Forests
+  choose root from size i subset of features instead of all features
+	forces diversity
+
+	big i: 
+	  increases correlation (bad)
+		increases accuracy of indiviudal trees (good)
+ 
+  also random forrests are good for missing data (just skip all trees that test that
+	 attribute)
+
+Stacking
+  Combine different classifiers together
+
+In practice ensembles are good
+In competitions, ensembles are very very good (although the code becomes big, complex, 
+and slower)
+
+
+ECOC Error-Correcting Output Coding
+
+
+
+
+
+Idea
+  Bagging
+	XG Boost
+	Random Forrest
+  Perceptron
+  Dumb Baseline

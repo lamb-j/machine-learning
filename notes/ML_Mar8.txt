@@ -1,0 +1,59 @@
+More practical stuff
+
+Use cross validations to distingusih better methods vs noise
+
+i.i.d. data: independant, identically distributed
+
+So if there is some time sensitivity in your data, then you should
+not mix stuff up in your validation sets.
+
+Otherwise your model will have "visions" of the future when training.
+
+
+"Concept Drift"
+  reeeally old data messes up new predictions. You can negativly weight really old data
+   (multiply by e^-t)
+  
+  you could also subsample older stuff, or oversample stuff from recent years (make copies 
+  of all data)
+  
+  
+  summary:
+    weight recent data more - subsampling or oversampling (throw away vs duplicate)
+
+Cost-sensitive classification
+  worse to mislabel important than mislabel spam
+
+	you can manipulate training data to hack loss function
+
+multi-task learning
+
+linear regression vs logisitic regression
+
+error handling
+  
+MAE = 1/n sum(y^ - y)
+mean absolute error  
+RMSE - root mean square error (penalizes being waay wrong more)
+RMSE = sqrt(1/n sum( pow(y^ - y, 2) ) ) 
+
+if there is big differences in the maginitueds of values, could throw off MAE. So
+we can put the values in log space to reduce this
+
+
+Handling missing vales: 
+  missing is a value iteself (missing can be useful information)
+  imputation
+	  make a new model to predict missin gvalues
+		just use mean or mode
+	could throw out, but doesn't work if things in test/validation set also have missing
+	data
+
+Book talks about
+  ranking
+	multi-class clasificatoin
+	  1 vs all, all pairs of classes, tournament/hierarchy
+
+Compare against
+  majortiy class
+

@@ -1,0 +1,52 @@
+Models
+
+	scikit D-Tree
+	scikit D-Tree bagging
+	scikit Random Forest
+
+Features
+  Normalize?
+
+	team_sum / total_sum
+
+Whole game data
+  max, min, avg, variance
+	  kills
+		wards
+		cc
+		damage
+		...
+
+First 10, 20, 30 mins
+  max, min, avg, variance
+
+    creepsPerMinDeltas
+		damageTakenPerMinDeltas
+		goldPerMinDeltas
+		xpPerMinDeltas
+
+    *csDiffPerMinDeltas
+		*damageTakenDiffPerMinDeltas
+		*xpDiffPerMinDeltas
+
+  
+Before Game data
+  max, min, avg, variance
+    champions (champion combos?)
+	  tier 
+		runes/mastiers how to aggregate this?
+		summoner name
+		avg length?
+
+Coniserations:
+  The performance of teams may not be comparable across teirs. For example, the creep
+	kills by the losing team in a Diamond tier game will likely be signficantly higher
+	than the creep kills by the winning team in a Gold tier game.
+
+	However this may just lead to some acceptable inaccuarcies the model
+
+To Do:
+ 
+  1. Get 10 minute data
+
+	2. Make models all the way through

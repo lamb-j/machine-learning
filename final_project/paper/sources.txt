@@ -1,0 +1,7 @@
+(sklearn seems to have some of these)
+Descion Tree
+Bagging Decision Trees
+Random Forest
+
+League of Legends
+League of Legends API

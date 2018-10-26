@@ -1,0 +1,55 @@
+Test error is the ultimate goal. 
+Training error can help see how to improve.
+
+
+High variance - more data can help
+							- or fewer features
+
+
+High bias - more complex model can help
+
+
+Bad training error:
+  more/different features
+  choose different regularlizer (maybe penalize large weights more)
+	
+	switch model class
+
+linear models normally have higher bias than KNN or K(x^n)
+  linear may not be expressive enough to get true function
+
+Newton's method
+	like gradient descent, but uses second derivatives (curvature) instead of just
+	first derivatves
+
+  L-BFGS - quasi-newton method (since actual newton method has to invert large
+	matrix which can be slow).
+
+
+
+Cumalutive Distribution function CDF - 
+  good way to choose where to discetize continuous features
+
+
+Ablative analysis:
+  remove stuff and see how it affects your accuracy (if little affect, maybe
+	not a necessary feature).
+
+  sometimes two features can be dependant, so even though they both have a large weight,
+	you don't need both
+
+
+Two different approaches
+  - super careful design, complex implementation
+
+	- throw quick-and-dirt prototype, diagnose, and fix
+
+ML Theory
+ No free lunch theorem
+   No way to guarantee generalization
+   on average, if data is unorofimly distributed, you're going to get 50% error
+
+  However, data is usually structred with patterns, and there is a chance of getting
+	better error rate
+
+

@@ -1,0 +1,40 @@
+What if the D-Tree has more than 2 labels?
+
+Leafs can take on any number of finite values.
+
+  Entropy (2 labes)
+    e = -p0log(p0) - p1log(p0)
+
+  Entropy (> 2 labes)
+    e = -p0log(p0) - p1log(p0) - p2log(p2) - ...
+
+
+Inductive bias,
+  many models have same training error. Inductive bias is how we choose among
+  them
+
+Machine Learning,
+  given stuff that you've seen, how can you predict the future.
+
+70% training, 10% validate, 20% test
+  validate needs to be large enough to rank models with confidence
+
+   Once you've used the held-out set to tune the hyperparametrs can you 
+   retrain wiht held-out added to train set?
+
+   if you have the right features, prediction is easy regardless
+   of learing algorithms. So data representation is very important.
+
+Remember:
+   with xor, it's hard for d-trees because the attributes don't make sense
+   by themselves, only when you have both
+
+---
+Perceptron
+  "Linear Model"
+    
+  Very compact, but can't always get all questions right
+  Not good at stuff like XOR (can't represent)
+
+
+  

@@ -1,0 +1,86 @@
+Practical Stuff
+
+Ch 5 + 7 CIML
+
+Choosing features can be more important than choosing a specific classfying 
+algorithm.
+You have lots of choices in everything always
+
+-----------
+Text-data features
+"Bag of words" - throws away order, only checks presence of words
+							 - vector of 0/1
+
+Tokenization
+  How words are defined
+
+Stemming 
+  skis skiing ski -> ski
+
+TF/IDF: Term frequency / inverse document frequency
+  different scales for words that are present in most documents (a, and , the)
+
+For text, KNN doesn't normally work well (thrown off by lots of rare words).
+Linear classifiers are used
+
+Stop Word removal
+  and, the, a, an, can lead to better performance
+
+word n-grams (e.g, bigrams)
+I like, like cats
+
+character n-grams
+hel ell llo, "<a.." vs " a "
+
+
+-----------
+Image Data
+
+Simple things like digit recognition can use traditional methods (KNN, SVM)
+
+Others (recoginize stuff in image based on pixels)
+
+SIFT features
+
+Deep Neural Networks
+  slow to train
+	use pre-trained model
+    AlexNet, GoogleNet, ImageNet
+	
+	Basically use the pretrained model, chop off the outputs, and then you have
+	a space of features where things are linearly separable
+
+	THe underlying assumption is that the hidden layers are creating feature 
+	spaces that are general to all images
+
+You can also do invaraints of your traingin data to increase your training data
+for example, rotations and scalings or stuff like that
+
+-----------
+Irrelevant Features
+
+Too many features:
+  Do nothing
+
+  Remove features with low variance or that are rare
+
+  Feature selection (mutual information)
+
+Too few features:
+  Add combinations
+
+  kernels
+
+  train descisions trees
+	
+	transfomraiton of continuous features
+	 
+	counts
+
+
+-----------
+Cross validation set
+
+5-way cross validation, divide test set into 5, and then use each piece
+as the validation set while the other four are test sets
+

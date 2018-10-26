@@ -1,0 +1,56 @@
+Today:
+  Linear SVMs
+  Neural Networks
+
+  Gradient of logisitic loss (should have been negative)
+
+ Linear models:
+   perceptron algoritm
+   linear regression
+   linear SVMs
+
+   three ways to choose w and b
+
+   maxium likelihood principle: you want to make the data you've seen in the 
+   past as probabale as possible
+   (maximize the probability)
+
+   max like prefers hihger weights, can cause overfitting
+
+   Summary:
+     To predict probabilites, minizimize logisitic loss with a regularlizer
+
+
+   Support Vector Machines:
+     optimal linear separot is one that's farthest from other points.
+     separator only depnds on nearest points (support vectors).
+
+     therefore num of support vectors gives upper-bound on LOOCV error
+
+  How to maximize the margin:
+    maximize y(wx + b) 
+     - bad idea
+    
+    maximize y(wx + b) / || w ||
+      - better idea, accounts for scale
+
+    maximize y(wx + b) for ||w|| <= 1
+    
+    ........ 1/||w|| for y(wx + b) >= 1
+
+    minimize ||w||^2 for y(wx + b) >= 1
+      - cant do if not lin sep.
+
+
+    Soft-Margin SVM
+    If not sep, we can add in slack variables.
+
+    minimize 1/2||w||^2 + C * sum(E_i)
+ 
+    s.t. y(wx + b) > 1 - E
+
+    turns out, soft-margin svm turns out be minimizing 
+      hinge-loss with a l2 regularlizer
+
+    sub-gradient descent, similar to gradient descent
+

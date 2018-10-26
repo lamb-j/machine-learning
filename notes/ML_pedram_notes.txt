@@ -1,0 +1,91 @@
+Parametric classifier
+  - can separate stuff based on parameters or variables.
+
+  - can learn a function.
+
+  - D-Trees are an example of a parametric classifier
+
+  - may have high bias because hypothesis parameters may not match real data
+    parameters
+    (normal vs bi-modal distibtions)
+
+Non-parametric classifier/algorithms
+  Major example is nearest neighbor 
+  nearest neighbor
+
+K-nearest neighbor
+  Learing algorithm
+     store training examples
+  Prediction
+    to classify a new example x by finding the example (xi, yi) that is nearest to x
+    Guess the class y = yi
+
+  K=1 very prone to overfitting
+    1-NN Decision Surface?
+
+  ADv
+   fast training
+   complex target functions
+   dont lose information
+
+  disadv
+   slow at query time
+   fooled by irrelevant attributes
+     for example, height when doing loans
+
+  issues
+    how to determine distance (usually euclidan)
+    choosing K
+    high deem space, neghbors may be not really close... 
+
+  Distance
+    euclid - square differnces between each attribute and take square root
+      works well for continuous data, not as much for catagorical 
+      also units for different attributes should be tricky
+      sqrt can be omitted for efficiency
+      
+    need to normalize yo shit or else attributes may not contribute 
+     fairly.
+
+    also use weighted euclidean distance
+      for example age may contribute more than height
+
+    how to determine weights? based of probs?
+    
+    Minkowski, or Lpnorm? (just lambda instead of 2 in euclidian
+
+    Manhattan distance (city block distance) lambda = 1
+
+    L infinitiy
+      find max k, attribute that contributees the most
+
+
+   Adding new dimensions can increase the difficulty of classification
+   especially if they are irrelevant!
+
+
+KD tree
+   similar to desciison tree
+
+   Edited Nearest Neighbor
+     - subset of points can still give good classifications
+     - incremental deletion
+          delete points that could be correctly classified given neighboring points, basically that point doesn't add any more information (anythign near it woudl be classified without it). 
+    - incremental growth, similar to delete, but you start with empty and add
+        (Prims vs Kruskal)
+
+  Summary
+   Adv
+    varible sized hypo space
+    falst learning O(n)
+    flexible disciiosn boundires
+    easy to implement
+    can be very effective
+
+  Dis
+   distance function can be tricky, need to normalize stuff
+   irrelevant features bad
+   can't handle more than 30 features
+   computation time is slow
+   
+Watch Pedro Domingo's Lectures

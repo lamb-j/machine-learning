@@ -1,0 +1,32 @@
+Neural Networks
+  each neuron is a perceptron
+  connect them all together
+
+  how to link?
+    just adding - still linear
+
+    sign(a)
+    
+    sigma(a)
+   
+    tangent_hyberbolic(a)
+   
+    ReLu(a) = max(a, 0);
+      can use subgradient to handle non-differnetiability
+      or use approximation (soft-plus) log(1 + e^a)
+
+  you can represent any boolean function with just one hidden layer, but size
+  of layer is exponential
+  
+  NN best way to approxiamte a functino
+
+  KNN - non parametric
+  NN - parametric
+
+  Back prop
+   chain rule + gradients
+
+  problem of NN - gradient descent can struggle to find global optimum.
+
+  gradient -descent = look at all examples, calcualte gradient
+  stochastic gradient descent = look at examples individually, calculate gradient

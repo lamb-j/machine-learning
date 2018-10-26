@@ -1,0 +1,46 @@
+Well:  I feel like I'm gaining a decent understanding of the concepts,
+  and I think the programming assignments are very reasonable.
+
+Not Well: The written homeworks. It's not clear how much detail or 
+rigor is required, for example on the "proof" homeworks. Also some of the 
+questions seem really unrelated to material convered in class, and even after
+finishing, I don't feel like I gained much understanding (for example, the hyper-cube
+hyper-spehre questions).
+
+
+Exam:
+  different reprentations
+  learning algorithms
+  when to use which ML method
+  Training/testing/overfitting/validation sets (the process)
+
+  1 page of notes (front/back)
+  understand kernels
+  kernelized svm, like kernilized perceptron, just a different way of picking the 
+    paramers. Model is the same, but algorithm for picking stuff different?
+
+
+
+Support Vector Machines
+"Based on slides by Vibhav Gogate, UT Dallas"
+
+Review of Kernelized Perceptron 
+
+  when predicition is wrong:
+    ai <- ai + 1
+    b <- b + y
+
+  Prediction
+  f(x) = sum(ai * yi (xi - x)
+  
+  In CIML,
+   ai <- ai + y
+
+
+  The kernel trick - lets you work with a high-dimensinal feature space without
+paying the cost for all the features (because you kernlize stuff). More compuationally efficient.
+
+  For example, gaussian Kernel. Actually ends up being similiar to NN, just trained differently
+
+
+  Kernels are a connection between llinear models and NN

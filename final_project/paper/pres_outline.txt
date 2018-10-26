@@ -1,0 +1,65 @@
+Title Page
+
+LoL intro
+  - online multiplayer video-game where opposing teams of 5 
+  compete for resources to capture objectives
+  - typical game lasts 45-60 minutes
+
+  - predicition goal: Predict if a team wins given data on resources from the 
+  10-minute mark
+
+Dataset
+  - 1000 games
+  - 145 MB of data
+  
+  # screenshot of data
+
+Features
+
+  - gold collected, creep score (closely related with gold), and damage taken
+  - Team average, min, max, var
+
+  12 features
+
+Decision Tree
+  - balanced examples (1000 winning teams, 1000 losing teams)
+  - easy to implement as baseline
+  
+  - used sklearn's classification
+  - used a train and validation set to tune 1 hyperparameter, 
+  depth of the tree
+
+  # tuning graph
+
+  # tree
+
+  - accuracy on train/validate sets
+
+Bagged Descision Tree
+
+  - Random subsets from the input to form a tree, form several trees,
+  have tree's vote for the correct label
+
+  - used sklearn's classification
+  - used same depth from D-Tree, trained new hyperparameter
+  - tuned hyperperamter number_of_estimators
+
+  # tuning graph
+
+  - accuracy on train/validate sets
+
+Random Forest
+
+  - like bagged descision trees, but instead of chosing the best splitting feature 
+    from each node, the best feature is chosen from a subset of the features
+
+Results
+  - not so good so far
+  - test set for all 3
+
+Future work
+  Expanded feature set
+  20/30 min data
+  Grid train parameters
+  Different Models
+  relative vs absolute feature sets
